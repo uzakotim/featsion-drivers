@@ -10,4 +10,8 @@ sudo npm -g install pm2
 echo -e "${GRN}Success${NC}"
 echo -e "${YLW}Adding user to dialout group${NC}"
 sudo usermod -a -G dialout $USER
+echo -e "${YLW}Configuring SSH${NC}"
+sudo systemctl enable sshd
+sudo systemctl start sshd
+sudo systemctl status sshd
 echo -e "${GRN}Installation complete${NC}"
