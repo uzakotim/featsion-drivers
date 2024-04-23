@@ -19,4 +19,6 @@ sudo pip3 install pyserial
 echo -e "${YLW}Disabling firewall${NC}"
 sudo systemctl stop firewalld
 sudo systemctl disable firewalld
+echo -e "${YLW}Removing brltty${NC}"
+sudo dnf remove brltty
 echo -e "${GRN}Installation complete${NC}"
